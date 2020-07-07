@@ -74,6 +74,7 @@ function setup() {
 
  // objects[id] = new ObjectDetected(id, x, y, state, localstate, ontime, offtime);
  socket = io.connect('https://cocreativetest2.herokuapp.com/');
+ socket.on('detected', newDrawing);
 }
 
 function loaded(){
@@ -155,7 +156,6 @@ function draw() {
 
 //  }
 //socket.on('detected', newDrawing);
-socket.on('detected', newDrawing);
 noStroke();
   fill(255)
   rect(0,0,800,160);
