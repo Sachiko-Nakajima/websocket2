@@ -74,7 +74,7 @@ function setup() {
 
  // objects[id] = new ObjectDetected(id, x, y, state, localstate, ontime, offtime);
  socket = io.connect('https://cocreativetest2.herokuapp.com/');
- socket.on('detected', newDrawing);
+// socket.on('detected', newDrawing);
 }
 
 function loaded(){
@@ -93,10 +93,11 @@ function appstart(){
 function newDrawing(data){
   stroke(255,0,0);
   fill(200,0,100);
-  ellipse(400,400,80,80);
+  ellipse(300,300,80,80);
   if(data.label == 'person'){
-    image(kitty, 800-data.x*4, data.y*4, data.w, data.h);}
+    image(kitty, 800-data.x*4, data.y*4, data.w, data.h);
     console.log("kitty is there!");
+  }
   // if(data.label == 'cell phone'){
   //     image(phone, 800-data.x*4, data.y*4, data.w, data.h);
   //       phonesound.setVolume(1);
