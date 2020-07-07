@@ -154,6 +154,9 @@ camState=!camState;
 function draw() {
 //  if(time%10==0){
   background(240,210,210);
+  stroke(255,0,0);
+  fill(200,0,100);
+  ellipse(400,400,40,40);
 
 //  }
 socket.on('detected', newDrawing);
