@@ -156,9 +156,9 @@ function draw() {
 
 //  }
 //socket.on('detected', newDrawing);
-noStroke();
-  fill(255)
-  rect(0,0,800,160);
+// noStroke();
+//   fill(255)
+//   rect(0,0,800,160);
   push();
   translate(800, 0);
   //then scale it by -1 in the x-axis
