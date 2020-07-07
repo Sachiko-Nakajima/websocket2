@@ -93,7 +93,7 @@ function appstart(){
 function newDrawing(data){
   stroke(255,0,0);
   fill(200,0,100);
-  ellipse(400,400,40,40);
+  ellipse(400,400,80,80);
   if(data.label == 'person'){
     image(kitty, 800-data.x*4, data.y*4, data.w, data.h);}
     console.log("kitty is there!");
@@ -157,9 +157,8 @@ function draw() {
   stroke(255,0,0);
   fill(200,0,100);
   ellipse(400,400,40,40);
-
+  socket.on('detected', newDrawing);
 //  }
-socket.on('detected', newDrawing);
 noStroke();
   fill(255)
   rect(0,0,800,160);
@@ -179,7 +178,6 @@ noStroke();
    }
   pop();
   
-  socket.on('detected', newDrawing);
   time++;
   
   if (camState){
