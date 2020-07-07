@@ -152,18 +152,18 @@ camState=!camState;
 function draw() {
 //  if(time%10==0){
   background(240,210,210);
-//  socket.on('detected', newDrawing);
 
 //  }
-//socket.on('detected', newDrawing);
-// noStroke();
-//   fill(255)
-//   rect(0,0,800,160);
+socket.on('detected', newDrawing);
+noStroke();
+  fill(255)
+  rect(0,0,800,160);
   push();
   translate(800, 0);
   //then scale it by -1 in the x-axis
   //to flip the image
   scale(-1, 1);
+  socket.on('detected', newDrawing);
 
   cam = image(camera_1,width/2-100,cam_y);
   camButton.onclick = showCam; 
