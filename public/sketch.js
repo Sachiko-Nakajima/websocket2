@@ -91,8 +91,9 @@ function appstart(){
 
 
 function newDrawing(data){
-  noStroke();
+  stroke(255,0,0);
   fill(200,0,100);
+  ellipse(400,400,40,40);
   if(data.label == 'person'){
     image(kitty, 800-data.x*4, data.y*4, data.w, data.h);}
     console.log("kitty is there!");
